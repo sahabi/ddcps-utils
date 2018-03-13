@@ -2,6 +2,7 @@ from pandas import read_csv
 from glob import glob
 from itertools import product
 import pandas as pd
+
 def dir_maker(root_dir):
     dirs = glob(root_dir + '/*')
     return dirs
