@@ -42,13 +42,13 @@ def smart_fillna(dfs):
 def main():
     parser = argparse.ArgumentParser(description='Preprocessing the LAMPS build data')
     parser.add_argument("-agg", '--aggregate', dest='agg', metavar='DIR',  nargs=1,
-            help="Aggregate all build data a single dataset"
+            help="Aggregate all build data a single dataset")
     parser.add_argument("-f", '--fill', dest='fillna', metavar='DIR', nargs='?',
             default="nofill", help='Fill the empty fields')
     parser.add_argument("-o", '--output', dest='output_name', nargs=1, default='out.csv',
             help="Provide a custom name for the output dataset.")
     args = parser.parse_args()
-  
+
     if args.agg is not None:
         df = aggregate(args.agg[0] + "/")
         if args.fillna != 'nofill':
